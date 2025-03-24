@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'helloworld';
+
+  title = 'angularApp';
+
+  ngOnInit(): void {
+    this.title = "Hello from BridgeLabz.";      // it is called after component is initialized, use when dynamic value    
+  }
+  // message: string = "Hello from BridgeLabz! "; // Template Expression Variable,  message is initialized when the component is created,    use when static values
 }
+
