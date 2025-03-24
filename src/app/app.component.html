@@ -1,5 +1,5 @@
 <div>
   <h1>{{ title }} {{ userName }}</h1>
   <input type="text" [(ngModel)]="userName" (input)="validateInput()" placeholder="Enter your name">
-  <p *ngIf="errorMsg" style="color: red;">{{ errorMsg }}</p>
+  <p *ngIf="errorMsg" style="color:red;">{{ errorMsg }}</p>
 </div>
