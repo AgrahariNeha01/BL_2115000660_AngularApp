@@ -1,22 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title="Helloworld";
-  imgUrl="assets/BL_logo_sqaure_jpg.jpg";
-  url = "https://www.bridgelabz.com";
-  
-  ngOnInit(): void{
-    this.title= "hello from bridgelabz"
+  title = 'angularApp';
+  imgUrl ="../assets/BL_logo_square_jpg.jpg";
+
+  ngOnInit(): void {
+    this.title = "Hello from BridgeLabz.";      // it is called after component is initialized, use when dynamic value    
   }
-  onClick(Sevent: Event) { 
-    console.log("Save button is clicked!", Sevent);
-    window.open(this.url, "_blank"); 
-  }
+  // message: string = "Hello from BridgeLabz! 🚀"; // Template Expression Variable,  message is initialized when the component is created,    use when static values
 }
