@@ -10,9 +10,15 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Hello from BridgeLabz';
-  userName: string = '';  // User input ke liye variable
+  userName: string = '';  
+  errorMsg: string = '';  
 
-  ngOnInit(): void {
-    this.title = "Hello from BridgeLabz.";     
+  validateInput() {
+    const regex = /^[A-Z][a-zA-Z]{2,}$/;  // Initial Caps + Min 3 letters
+    if (!regex.test(this.userName)) {
+      this.errorMsg = 'Invalid Name! First letter should be capital & min 3 letters required.';
+    } else {
+      this.errorMsg = '';  // No error
+    }
   }
 }
